@@ -26,6 +26,7 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.tooling.preview.PreviewScreenSizes
+import com.example.mylist.ui.screen.AnimeScreen
 import com.example.mylist.ui.theme.MyListTheme
 
 class MainActivity : ComponentActivity() {
@@ -33,13 +34,7 @@ class MainActivity : ComponentActivity() {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
         setContent {
-            Box(
-                modifier = Modifier
-                    .fillMaxSize()
-                    .background(Color.White)
-            ){
-                Text(text = "test");
-            }
+            AnimeScreen()
         }
     }
 }
