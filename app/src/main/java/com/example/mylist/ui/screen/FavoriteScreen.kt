@@ -1,6 +1,9 @@
 package com.example.mylist.ui.screen
 
 import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.Row
+import androidx.compose.foundation.layout.Spacer
+import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
@@ -20,11 +23,13 @@ fun FavoriteScreen(
     val favorites = viewModel.favoriteList.collectAsState(initial = emptyList())
 
     Column {
-        Button(
-            onClick = onBack,
-            modifier = Modifier.padding(16.dp)
-        ) {
-            Text("Back")
+        Column{
+            Button(
+                onClick = onBack,
+                modifier = Modifier.padding(16.dp).fillMaxWidth()
+            ) {
+                Text("Top Anime")
+            }
         }
 
         LazyColumn {
